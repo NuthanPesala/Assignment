@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var list = [APOD]()
+    // Spinner
+    var activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+        aiv.translatesAutoresizingMaskIntoConstraints = false
+        aiv.isHidden = true
+        return aiv
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +32,24 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
         
+        //activityIndicatorView
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        activityIndicatorView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        activityIndicatorView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        activityIndicatorView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        self.activityIndicatorView.isHidden = true
+        
         self.fetchAllAPOD()
     }
 
  // API Calling: Fetching all the list of metadata of NASA’s Astronomy Picture of  the Day (APOD).
    
     func fetchAllAPOD() {
+        DispatchQueue.main.async {
+            self.activityIndicatorView.startAnimating()
+            self.activityIndicatorView.isHidden = false
+        }
         guard let url = URL(string: "http://demo0405353.mockable.io/get-nasa-photos") else {
             print("Invalid Url")
             return
@@ -72,6 +91,8 @@ class ViewController: UIViewController {
                                 }
                                 DispatchQueue.main.async {
                                  self.tableView.reloadData()
+                                 self.activityIndicatorView.stopAnimating()
+                                 self.activityIndicatorView.isHidden = true
                                 }
                             }
                         }

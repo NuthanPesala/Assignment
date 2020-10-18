@@ -140,21 +140,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Section-2" id="SC4-04-5rd">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="ZHi-X0-xKJ">
-                                        <rect key="frame" x="0.0" y="385" width="414" height="74"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="ZHi-X0-xKJ">
+                                        <rect key="frame" x="0.0" y="385" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZHi-X0-xKJ" id="A3b-hC-rFr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81s-XT-OWQ">
                                                     <rect key="frame" x="10" y="10" width="272" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-k3-jNB">
-                                                    <rect key="frame" x="10" y="39" width="394" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -168,17 +162,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3C9-He-uWg">
+                                                    <rect key="frame" x="10" y="35" width="394" height="67"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3C9-He-uWg" secondAttribute="trailing" constant="10" id="1qe-fq-t8s"/>
+                                                <constraint firstItem="3C9-He-uWg" firstAttribute="top" secondItem="81s-XT-OWQ" secondAttribute="bottom" constant="4" id="32m-Qy-xhM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Bxx-2K-fUr" secondAttribute="trailing" constant="8" id="4Z8-2C-XaX"/>
                                                 <constraint firstItem="Bxx-2K-fUr" firstAttribute="top" secondItem="A3b-hC-rFr" secondAttribute="top" constant="10" id="Adp-WK-M1e"/>
-                                                <constraint firstItem="9dd-k3-jNB" firstAttribute="top" secondItem="81s-XT-OWQ" secondAttribute="bottom" constant="8" id="C1P-Ym-yUe"/>
                                                 <constraint firstItem="81s-XT-OWQ" firstAttribute="top" secondItem="A3b-hC-rFr" secondAttribute="top" constant="10" id="IQR-xY-Ezi"/>
-                                                <constraint firstAttribute="trailing" secondItem="9dd-k3-jNB" secondAttribute="trailing" constant="10" id="gFm-f4-f3Z"/>
+                                                <constraint firstItem="3C9-He-uWg" firstAttribute="leading" secondItem="A3b-hC-rFr" secondAttribute="leading" constant="10" id="rT2-xw-pSE"/>
                                                 <constraint firstItem="Bxx-2K-fUr" firstAttribute="leading" secondItem="81s-XT-OWQ" secondAttribute="trailing" constant="4" id="sL8-kJ-OT8"/>
-                                                <constraint firstItem="9dd-k3-jNB" firstAttribute="leading" secondItem="A3b-hC-rFr" secondAttribute="leading" constant="10" id="u8a-57-oiZ"/>
-                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="9dd-k3-jNB" secondAttribute="bottom" constant="14.5" id="vQw-LI-oVO"/>
                                                 <constraint firstItem="81s-XT-OWQ" firstAttribute="leading" secondItem="A3b-hC-rFr" secondAttribute="leading" constant="10" id="wmi-qe-8l5"/>
+                                                <constraint firstAttribute="bottom" secondItem="3C9-He-uWg" secondAttribute="bottom" constant="8" id="xwR-oX-PRy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -192,7 +193,7 @@
                     </tableView>
                     <connections>
                         <outlet property="dateLabel" destination="Bxx-2K-fUr" id="xkl-5H-Ail"/>
-                        <outlet property="descLabel" destination="9dd-k3-jNB" id="6qI-aB-Uhh"/>
+                        <outlet property="descLabel" destination="3C9-He-uWg" id="xx9-fE-ZIO"/>
                         <outlet property="picView" destination="NRm-Ru-pNS" id="sVG-D8-ulh"/>
                         <outlet property="playButton" destination="MDK-5b-VOZ" id="6LM-5P-iw2"/>
                         <outlet property="titleLabel" destination="81s-XT-OWQ" id="OOp-9f-cuT"/>
@@ -200,7 +201,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUp-0A-lvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="122"/>
+            <point key="canvasLocation" x="1689.8550724637682" y="121.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pBy-s4-5Kw">

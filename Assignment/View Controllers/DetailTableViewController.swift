@@ -14,7 +14,7 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var picView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var descLabel: UITextView!
     @IBOutlet weak var playButton: UIButton!
     
     var object: APOD?
@@ -111,10 +111,10 @@ class DetailTableViewController: UITableViewController {
         return ""
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return 300
+      return 310
     }
 
-    // If media_type is Video ..it takes you to safari browser there you can see video
+    // If media_type is Video ..it takes you to youtube application if it is in ur device or else it takes you to the safari browser there you can see video
     func playInYoutube(url: URL) {
         if UIApplication.shared.canOpenURL(url) {
             // redirect to app
