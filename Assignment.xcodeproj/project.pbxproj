@@ -13,6 +13,10 @@
 		5AD10EBF253B34AA006BBDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD10EBD253B34AA006BBDBB /* Main.storyboard */; };
 		5AD10EC1253B34BD006BBDBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD10EC0253B34BD006BBDBB /* Assets.xcassets */; };
 		5AD10EC4253B34BD006BBDBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD10EC2253B34BD006BBDBB /* LaunchScreen.storyboard */; };
+		5AD10ECD253B5484006BBDBB /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD10ECC253B5484006BBDBB /* APOD.swift */; };
+		5AD10ECF253B582C006BBDBB /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD10ECE253B582C006BBDBB /* DetailTableViewController.swift */; };
+		5AD10ED1253B589C006BBDBB /* APODTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD10ED0253B589C006BBDBB /* APODTableViewCell.swift */; };
+		5AD10ED5253C38C1006BBDBB /* ExtensionOfUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD10ED4253C38C1006BBDBB /* ExtensionOfUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5AD10EC0253B34BD006BBDBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AD10EC3253B34BD006BBDBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AD10EC5253B34BD006BBDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD10ECC253B5484006BBDBB /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		5AD10ECE253B582C006BBDBB /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		5AD10ED0253B589C006BBDBB /* APODTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODTableViewCell.swift; sourceTree = "<group>"; };
+		5AD10ED4253C38C1006BBDBB /* ExtensionOfUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionOfUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				5AD10EB7253B34AA006BBDBB /* AppDelegate.swift */,
 				5AD10EB9253B34AA006BBDBB /* SceneDelegate.swift */,
-				5AD10EBB253B34AA006BBDBB /* ViewController.swift */,
+				5AD10ED2253C37D9006BBDBB /* View Controllers */,
+				5AD10ECB253B5451006BBDBB /* Model */,
+				5AD10ED3253C387F006BBDBB /* Views */,
 				5AD10EBD253B34AA006BBDBB /* Main.storyboard */,
 				5AD10EC0253B34BD006BBDBB /* Assets.xcassets */,
 				5AD10EC2253B34BD006BBDBB /* LaunchScreen.storyboard */,
 				5AD10EC5253B34BD006BBDBB /* Info.plist */,
+				5AD10ED4253C38C1006BBDBB /* ExtensionOfUIImageView.swift */,
 			);
 			path = Assignment;
+			sourceTree = "<group>";
+		};
+		5AD10ECB253B5451006BBDBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AD10ECC253B5484006BBDBB /* APOD.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AD10ED2253C37D9006BBDBB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD10EBB253B34AA006BBDBB /* ViewController.swift */,
+				5AD10ECE253B582C006BBDBB /* DetailTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5AD10ED3253C387F006BBDBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD10ED0253B589C006BBDBB /* APODTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD10EBC253B34AA006BBDBB /* ViewController.swift in Sources */,
+				5AD10ECF253B582C006BBDBB /* DetailTableViewController.swift in Sources */,
+				5AD10ECD253B5484006BBDBB /* APOD.swift in Sources */,
+				5AD10ED5253C38C1006BBDBB /* ExtensionOfUIImageView.swift in Sources */,
 				5AD10EB8253B34AA006BBDBB /* AppDelegate.swift in Sources */,
 				5AD10EBA253B34AA006BBDBB /* SceneDelegate.swift in Sources */,
+				5AD10ED1253B589C006BBDBB /* APODTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
