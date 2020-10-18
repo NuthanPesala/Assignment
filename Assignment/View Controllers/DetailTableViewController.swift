@@ -111,10 +111,7 @@ class DetailTableViewController: UITableViewController {
         return ""
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 {
-            return 200
-        }
-        return 301
+      return 300
     }
 
     // If media_type is Video ..it takes you to safari browser there you can see video
